@@ -1,0 +1,32 @@
+{%- set description = 'FWNL is a firewall configuration bot that generates FWUnify compatible settings throught natural-language processing.' -%}
+
+<!DOCTYPE html>
+<html class="light-palette" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/theme.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- begin SEO meta -->
+  <title>{% block title required %}{% endblock %}</title>
+  <meta name="og:title" content="{{ self.title() }}">
+  <meta name="description" content="{{ description }}">
+  <meta name="og:description" content="{{ description }}">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "description": "{{ description }}",
+      "headline": "{{ self.title() }}",
+      "name": "{{ self.title() }}",
+      "url":"https://joseaugustogoulart.com/"
+    }
+  </script>
+</head>
+<body>
+  {% block content required %}{% endblock %}
+</body>
+</html>

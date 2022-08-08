@@ -1,0 +1,8 @@
+.idea
+.vscode
+.pytest_cache
+node_modules
+src/*.egg-info
+build/
+__pycache__/
+dist

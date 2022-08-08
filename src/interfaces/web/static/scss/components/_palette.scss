@@ -1,0 +1,22 @@
+/*
+ * Palette component
+ */
+
+@use 'sass:map';
+@use 'constants' as c;
+
+$_current: null;
+
+@mixin set() {
+  @each $palette, $map in c.$palettes {
+    $_current: $map !global;
+    @at-root .#{$palette} & {
+      @content;
+    }
+  }
+  $_current: null !global;
+}
+
+@function get($key) {
+  @return map.get($_current, $key);
+}

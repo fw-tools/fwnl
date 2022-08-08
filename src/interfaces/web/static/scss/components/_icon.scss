@@ -1,0 +1,11 @@
+/*
+ * Icon component
+ */
+
+@forward 'fontello';
+
+@mixin set($icon: '') {
+  content: $icon;
+  font-family: 'fontello';
+  font-weight: 100;
+}

@@ -1,0 +1,22 @@
+/*
+ * Error theme styles
+ */
+
+@use 'palette';
+
+main.error {
+  max-width: 40vw;
+
+  .code {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+
+  .code,
+  .message {
+    text-align: center;
+    @include palette.set() {
+      color: palette.get('error-code-color');
+    }
+  }
+}

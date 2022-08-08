@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" -%}
+
+{%- block content -%}
+  <main class="chat">
+    <div class="tab">
+      <div class="title">
+        {% block title %}Firewall Bot{% endblock %}
+      </div>
+      <button id="light-switch">
+        <i class="icon"></i>
+      </button>
+    </div>
+    <div class="screen">
+    </div>
+    <form class="messageinput">
+      <div class="textarea" contenteditable></div>
+      <button type="submit">
+        <i class="icon-direction"></i>
+      </button>
+    </form>
+  </main>
+  <div class="bg"></div>
+  <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/palette.js') }}"></script>
+{%- endblock content %}

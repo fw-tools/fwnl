@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "fwnl"
+authors = [
+  { name="Augusto Goulart", email="josegoulart.aluno@unipampa.edu.br" },
+  { name="Gabriel Machado", email="gabriellunardi@unipampa.edu.br" },
+  { name="Rodrigo Mansilha", email="rodrigomansilha@unipampa.edu.br" },
+  { name="Diego Kreutz", email="diegokreutz@unipampa.edu.br" },
+  { name="Kayuã Oleques Paim", email="kayuapaim.aluno@unipampa.edu.br" },
+  { name="Washington Fagundes", email="washingtonfagundes@unipampa.edu.br" },
+]
+description = "A firewall settings helper bot."
+readme = "README.md"
+requires-python = ">=3.8"
+license-files = { paths = ["LICENSE"] }
+keywords = [
+  "firewall",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dynamic = ["version"]
+
+[project.scripts]
+fwnl = "interfaces.terminal:main"
+fwnl-telegram = "interfaces.telegram:main"
+fwnl-web = "interfaces.web:main"
+
+[project.urls]
+"Homepage" = "https://github.com/oAGoulart/fwnl"
+"Bug Tracker" = "https://github.com/oAGoulart/fwnl/issues"
+
+[tool.pytest]
+pythonpath = "src/"

@@ -1,0 +1,22 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+regex = "==2022.7.25"
+unidecode = "==1.3.4"
+spacy = "==3.4.0"
+python-telegram-bot = "==20.0a1"
+rita-dsl = "==0.7.4"
+flask = "==2.1.3"
+fwnl = {editable = true, path = "."}
+
+[dev-packages]
+pytest = "*"
+build = "*"
+sphinx = "*"
+sphinx-bulma = "*"
+
+[requires]
+python_version = "3.8"

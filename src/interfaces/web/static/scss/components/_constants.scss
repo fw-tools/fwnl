@@ -1,0 +1,70 @@
+/*
+ * Constant values
+ */
+
+@use 'sass:map';
+
+@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+$fonts: (
+  'sans-serif': "'Urbanist', sans-serif",
+  'monospace': "'Cutive Mono', monospace"
+) !default;
+
+$palettes: (
+  'dark-palette': (
+    'background': linear-gradient(120deg, #4B79A1, #283E51),
+    'text-color': hsl(0, 0%, 100%),
+    'tab-bg': #151f3e,
+    'tab-text': hsl(0, 0%, 100%),
+    'input-bg': hsl(230, 34%, 18%),
+    'input-text': hsl(0, 0%, 100%),
+    'button-bg': hsl(241, 44%, 63%),
+    'button-text': hsl(0, 0%, 10%),
+    'button-hover': hsl(0, 0%, 100%),
+    'screen-bg': hsl(0, 0%, 10%),
+    'screen-text': hsl(0, 0%, 100%),
+    'message-bg': hsla(225, 47%, 71%, 0.4),
+    'message-text': hsl(0, 0%, 1%),
+    'time-color': hsl(0, 0%, 100%),
+    'image-border': hsl(0, 0%, 100%),
+    'user-bg': linear-gradient(120deg, #acb6e5, #86fde8),
+    'user-text': hsl(0, 0%, 0%),
+    'user-border': #86fde8,
+    'textarea-bg': hsl(0, 0%, 10%),
+    'textarea-text': hsl(0, 0%, 100%),
+    'error-code-color': hsl(0, 0%, 100%),
+    'font-family': #{map.get($fonts, 'sans-serif')},
+    'switch-icon': '\e900',
+    'switch-bg': hsl(241, 44%, 63%),
+    'switch-color': hsl(0, 0%, 10%)
+  ),
+  'light-palette': (
+    'background': linear-gradient(120deg, #4ECDC4, #556270),
+    'text-color': hsl(0, 0%, 0%),
+    'tab-bg': #e1e1e1,
+    'tab-text': hsl(0, 0%, 0%),
+    'input-bg': hsl(230, 50%, 34%),
+    'input-text': hsl(0, 0%, 94%),
+    'button-bg': hsl(249, 48%, 22%),
+    'button-text': hsl(0, 0%, 100%),
+    'button-hover': hsl(241, 44%, 63%),
+    'screen-bg': hsl(0, 0%, 100%),
+    'screen-text': hsl(0, 0%, 0%),
+    'message-bg': hsla(226, 23%, 52%, 0.4),
+    'message-text': hsl(0, 0%, 1%),
+    'time-color': hsl(0, 0%, 0%),
+    'image-border': hsla(0, 0%, 0%, 0.4),
+    'user-bg': linear-gradient(120deg, #0052D4, #4364F7, #6FB1FC),
+    'user-text': hsl(0, 0%, 100%),
+    'user-border': #6FB1FC,
+    'textarea-bg': hsl(0, 0%, 100%),
+    'textarea-text': hsl(0, 0%, 0%),
+    'error-code-color': hsl(0, 0%, 0%),
+    'font-family': #{map.get($fonts, 'sans-serif')},
+    'switch-icon': '\e902',
+    'switch-bg': hsl(249, 48%, 22%),
+    'switch-color': hsl(0, 0%, 100%)
+  )
+) !default;
+ 

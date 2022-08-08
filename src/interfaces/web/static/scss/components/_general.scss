@@ -1,0 +1,75 @@
+/*
+ * General theme styles
+ */
+
+@use 'palette';
+@use 'icon';
+@use 'util';
+
+$_breakpoint: 1024px;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  @include palette.set() {
+    color: palette.get('text-color');
+    font-family: palette.get('font-family');
+  }
+
+  .bg {
+    filter: blur(80px);
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+    @include palette.set() {
+      background: palette.get('background');
+    }
+    @include util.from($_breakpoint) {
+      @include util.transform(scale(2));
+    }
+  }
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  @include palette.set() {
+    color: palette.get('text-color');
+  }
+  
+  &:-ms-input-placeholder {
+    color: inherit;
+  }
+  
+  &::-ms-input-placeholder {
+    color: inherit;
+  }
+
+  &::-webkit-input-placeholder {
+    color: inherit;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}

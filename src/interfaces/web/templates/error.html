@@ -1,0 +1,11 @@
+{% extends "layouts/base.html" -%}
+
+{%- block title %}{{ code }}{% endblock -%}
+{% block content -%}
+  <main class="error">
+    <div class="code">{{ code }}</div>
+    <div class="message">{{ message }}</div>
+  </main>
+  <div class="bg"></div>
+  <script src="{{ url_for('static', filename='js/palette.js') }}"></script>
+{%- endblock content %}

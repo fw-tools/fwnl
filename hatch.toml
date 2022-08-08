@@ -1,0 +1,14 @@
+[version]
+path = "src/fwnl/__about__.py"
+
+[metadata]
+allow-direct-references = true
+
+[build.targets.sdist]
+exclude = [
+  "/.vscode",
+  "/tests",
+]
+
+[build.targets.wheel]
+packages = ["src/fwnl", "src/interfaces"]
