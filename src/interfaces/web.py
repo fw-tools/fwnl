@@ -77,7 +77,7 @@ def create_interface():
 
 def main():
   try: 
-    create_interface().run(host='0.0.0.0')
+    create_interface().run(host='0.0.0.0', port=80)
   except KeyboardInterrupt:
     sys.exit()
 
