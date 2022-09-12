@@ -37,6 +37,7 @@ class Intent(ABC):
     s = '\n\ndefine intent {}:\n'.format(self.label)
     for c in self.commands:
       s += c.generate()
+    s += "add middlebox('cisco-1', 'iptables-1', 'openflow-1')\n"
     return s.lower()
 
   def question(self) -> str:
