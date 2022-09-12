@@ -293,7 +293,7 @@ class Before(Value):
     """Generate value.
     See base class for more details.
     """
-    return "before('all')"
+    return "before('all-intents')"
 
 class After(Value):
   """After derived value."""
@@ -317,4 +317,4 @@ class After(Value):
     """Generate value.
     See base class for more details.
     """
-    return "after('all')"
+    return "after('all-intents')"
