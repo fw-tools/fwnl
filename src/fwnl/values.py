@@ -93,7 +93,7 @@ class Endpoint(Value):
       pattern = [{"TEXT": {"REGEX": r"^{0}(?:\.{0}){{3}}$".format(octet_rx)}}]
       rules.matcher.add('IPV6', [pattern])
 
-      pattern = [{"TEXT": {"REGEX": r"^(all|laboratory|server|professor|secretary|classroom)$"}}]
+      pattern = [{"TEXT": {"REGEX": r"^(any|laboratory|server|professor|secretary|classroom)$"}}]
       rules.matcher.add('HOSTNAME', [pattern])
 
   def generate(self) -> str:
